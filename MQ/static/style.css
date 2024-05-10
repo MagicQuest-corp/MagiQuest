@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Urbanist:ital,wght@0,800;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Russo+One&family=Urbanist:ital,wght@0,800;1,800&display=swap');
+body{
+    background-image: url("images/adnu-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+/* NAVIGATION BAR*/
+.header {
+    background-color: #25404d;
+    position: fixed; /* Fix the navbar position */
+    padding: 20px;
+    width: 100%;
+    top: 0; /* Position the navbar at the top of the viewport */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure the navbar stays on top of other content */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+
+.navbutton{
+    font-size: 15px;
+    color: #4e4c4c;
+    font-family: 'Russo One', sans-serif;
+    margin-left: 1px;
+    margin-right: 5px;
+    padding: 13px 50px;
+    border: none;
+    background-color: #d9d9d9;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+}
+
+.navbutton:hover{
+    background-color: #FFB703;
+}
+
+
+
+
+/* FORM CONTAINER*/
+.form-container {
+   background-color: #f5f5f5;
+    width: 300px; /* Adjust width as needed */
+    height: 450px;
+    margin-left: auto; /* Center the container horizontally */
+    margin-right: 10%;
+    margin-top: 10%;
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 30px; /* Add border radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+}
+
+.form-container form {
+    text-align: center; /* Center align form content */
+}
+
+.infolabel{
+    font-size: 20px;
+    font-family: "Urbanist", sans-serif;
+    margin-right: 40% ;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container button {
+    display: block; /* Display form elements as block for vertical alignment */
+    margin: 10px auto; /* Center align form elements horizontally */
+    width: 80%; /* Set width of form elements */
+}
+
+.formbox{
+    padding: 10px;
+    border-radius: 10px;
+    /* border: 10px; */
+    background-color: #f5deb3;
+}
+
+.formbox::placeholder{
+    font-family: 'Russo One', sans-serif;
+    color: #969090;
+    
+}
+
+.formtitle{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: "Urbanist", sans-serif;
+}
+
+
+.loginbutton, .registerbutton{
+    color: #f5deb3;
+    font-size: 15px;
+    font-family: "Urbanist", sans-serif;
+    border-radius: 50px ;
+    padding: 15px;
+}
+
+.loginbutton{
+    background-color: #023047;
+}
+
+.registerbutton{
+    background-color: #470230;
+}
+
+#logo{
+    margin-right: auto; /* Center the container horizontally */
+    margin-left: 50%;
+    margin-bottom: 100%;
+}
+
+.logo-and-forms {
+    position: relative; /* Positioning context for absolute positioning */
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 90%;
+    z-index: 1; /* Ensure logo appears on top */
+    margin-right: 20px;
+   
+}
+
+.form-container {
+    position: relative;
+    top: 0;
+    right: 30px; /* Adjust the left position to create space between logo and forms */
+}
+
+footer{
+    margin-left: 30px;
+    font-family: 'Russo One', sans-serif;
+}
