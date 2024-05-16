@@ -1,36 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sign Up Form</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-   <h3>Sign Up</h3>
+        
+        {% load static %}
+        <!DOCTYPE html>
 
-   <form action="/signup/" method="post">
-    {% csrf_token %}
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" placeholder="Create a Username (only letters and numbers)" required>
-        <br>
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="fname" placeholder="Enter Your First Name" required>
-        <br>
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lname" placeholder="Enter Your Last Name" required>
-        <br>
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
-        <br>
-        <label for="pass1">Password</label>
-        <input type="password" id="pass1" name="pass1" placeholder="Create Your Password" required>
-        <br>
-        <label for="pass2">Confirm your password</label>
-        <input type="password" id="pass2" name="pass2" placeholder="Confirm Your Password" required>
-        <br>
-        <button type="submit">Sign Up</button>
-   </form>
-</body>
-</html>
+        <html>
+            <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" conten   t="IE=edge">
+                <title>Register page</title>
+               
+                <meta name="description" content="">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+                <link rel="stylesheet" type="text/css" href="{% static 'styleReg.css' %}">
+        
+            </head>
+            <body>
+    
+        
+                <header class="header">
+        
+                    <nav class="navbar">
+                        <a href="#"><button class= "navbutton">About</button></a>
+                        <a href="#"><button class= "navbutton">Home</button></a>
+                        <a href="#"><button class= "navbutton">Contact us</button></a>
+                </nav>
+        
+                </header>
+        
+                    
+                <section class="logo-and-forms">
+                    <div class="logo">
+                        <img name="logo" id="logo" src="{% static 'images/Title&Logo.png' %}" alt="Logo">
+                    </div>
+                
+                    <div class="form-container" id="fcRegister" name="fcRegister">
+                        <form action="/signup/" method="post">
+                            <h3 class="formtitle">REGISTER</h3>
+                            {% csrf_token %}
+                            <label for="Username" class="infolabel">Username</label>
+                            <input type="text" id="username" name="username" class="formbox" placeholder="Enter your Username" required>
+                            <br>
+                            <label for="fname" class="infolabel">First Name</label>
+                            <input type="text" id="fname" name="fname" class="formbox" placeholder="Enter your First Name" required>
+                            <br>
+                            <label for="lname" class="infolabel" id="lnameLabel">Last Name (optional)</label>
+                            <input type="text" id="lname" name="lname" class="formbox" placeholder="Enter your Last Name" >
+                            <br>
+                            <label for="email" class="infolabel" id="emailAdd" name="emailAdd" >Email Address</label>
+                            <input type="email" id="email" name="email" class="formbox" placeholder="Enter Your Email" required>
+                            <br>                    
+
+                            <label for="password"  class="infolabel">Password</label>
+                            <input type="password" id="pass1" name="pass1" class="formbox" placeholder="Enter your password" required>
+                            <br>
+                             <label for="password"  class="infolabel" id="Cpass" name="Cpass">Confirm Password</label>
+                            <input type="password" id="pass2" name="pass2" class="formbox" placeholder="Enter your password" required>
+                            <br>
+                          
+                            <button type="submit" class="loginbutton">Register</button>
+                            <button type="button" class="registerbutton" onclick="redirectToRegister()">Login Here!</button>
+                                <!-- redirect to register -->
+                                <script>
+                                    function redirectToRegister() {
+                                        window.location.href = "/signin"; 
+                                    }
+                                </script>
+        
+                        </form>
+                    </div>
+                </section>
+        
+                <footer><p>© 2024 | MagiQuest by Ateneo De Naga University Students | All Rights Reserved</p></footer>
+                
+               
+               
+        
+        
+               
+                <script src="" async defer></script>
+            </body>
+        </html>
