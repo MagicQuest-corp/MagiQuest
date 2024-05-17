@@ -13,7 +13,6 @@ body{
 /* NAVIGATION BAR*/
 .header {
     background-color: #25404d;
-    position: fixed; /* Fix the navbar position */
     padding: 20px;
     width: 100%;
     top: 0; /* Position the navbar at the top of the viewport */
@@ -37,7 +36,7 @@ body{
 
 
 .navbutton{
-    font-size: 10px;
+    font-size: 20px;
     color: #4e4c4c;
     font-family: 'Russo One', sans-serif;
     margin-left: 1px;
@@ -161,3 +160,17 @@ footer{
     margin-left: 30px;
     font-family: 'Russo One', sans-serif;
 }
+
+
+/* Landingpage css */
+ .scrollable-square {
+            width: 500px; /* Set the width of the square */
+            height: 500px; /* Set the height of the square */
+            border: 2px solid #000; /* Optional: Add a border to the square */
+            overflow-y: scroll; /* Enable vertical scrolling */
+            overflow-x: hidden; /* Disable horizontal scrolling */
+        }
+
+        .mission-title {
+            font-size: 100px; /* Set the font size for the mission title */
+        }

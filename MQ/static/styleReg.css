@@ -15,7 +15,6 @@ body{
 /* NAVIGATION BAR*/
 .header {
     background-color: #25404d;
-    position: fixed; /* Fix the navbar position */
     padding: 20px;
     width: 100%;
     top: 0; /* Position the navbar at the top of the viewport */

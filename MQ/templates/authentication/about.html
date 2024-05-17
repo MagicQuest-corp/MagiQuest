@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{% static 'styleLand.css' %}">
+
+    </head>
+    <body>
+
+        <header class="header">
+
+            <nav class="navbar">
+                <a href="{% url 'about' %}"><button class= "navbutton">About</button></a>
+                <a href="{% url 'LandingPage' %}"><button class= "navbutton">Home</button></a>
+                <a href="{% url 'contact_us' %}"><button class= "navbutton">Contact us</button></a>
+        </nav>
+
+        </header>
+
+  
+
+
+            <div class="scrollable-square-about">
+                <div class="about-title">  <span class="yellow">ABOUT</span> <span class="darkish">MagiQuest</span></div>
+                  
+                <div class="about-inside">
+                    <div class="titles">
+                    <span class="yellow">Welcome to</span> <span  class="darkish">MagiQuest!</span>
+                        <br>
+                </div>
+                     <div class="details">
+                    <p>At Magiquest, we believe that a lively and dynamic college experience is shaped by the active interaction and the power of community. Our innovative quest system encourages college learners to participate actively in acmpus life by providing enjoyable, fulfilling, and meaningful experiences. </p>
+                      </div>
+
+                      <div class="titles"><br>
+                        <span class="yellow">How it </span> <span  class="darkish">Works</span>
+                         </div>
+                         <div class="details">
+                            <p>Students can participate in a variety of quests, including helping campus clubs recruit members, organizing study sessions, and engaging in community service projects like campus clean-ups. Completing these quests earns points that can be exchanged for exclusive rewards.</p>
+                            <br>
+                            <p>Our unique currency system, MagiPoints, rewards your efforts and contributions, which you can use to buy coupons for discounts on snacks, food items in the cafeteria, and university merchandise, as well as unlock exclusive offers. Additionally, MagiQuest features a built-in messaging system to help you connect with fellow students, making it easy to coordinate study sessions, discuss quests, or just have a chat.</p>
+                              </div>
+
+                              <br>
+                              <div class="titles">
+                                <span class="yellow">JOIN US on the Quest </span> <span  class="darkish">for a Better Campus!</span>
+                                 </div>
+
+                
+                </div>
+               
+            </div>
+            
+        </div>
+        
+
+        
+        
+
+        <script src="" async defer></script>
+    </body>
+</html>

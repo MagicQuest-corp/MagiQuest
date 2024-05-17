@@ -1,10 +1,15 @@
+
+
+
+
+
 {% load static %}
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Home Page</title>
+        <title>Quest Post</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="{% static 'styleLand.css' %}">
@@ -22,7 +27,6 @@
 
         </header>
 
-        
 
 
 
@@ -54,22 +58,39 @@
                 </div>   
             </div>
             </div>
-            <div class="scrollable-square">
-                <nav class="navigation-bar">
-                    <ul>
-                        <li>
-                            <a href="{% url 'add-mission' %}" class="post-link">Post a Quest!</a>
-                        </li>
-                        <li>
-                            <form action="{% url 'search_blogs' %}" method="get">
-                                {% csrf_token %}
-                                <input type="text" name="q" placeholder="Search Quest" id="searchBar">
-                                <button type="submit" id="search-button"><img name="magnifyer" id="magnifyer" src="{% static 'images/magnifyer.png' %}" alt="Logo"></button>
-                            </form>
-                        </li>
-                    </ul>
-                </nav>
+            <div class="mission-desc">
+                <div class="mission-container">
                 
+                        <form method="POST" class="post-form">
+                            {% csrf_token %}
+                            <div class="form-group">
+                     
+                                <!-- Apply unique class or ID to the title text area -->
+                                <div class="quest-container">
+                                    <span class="quest-title">Quest Title</span>
+                                    <textarea name="title" id="id_title" class="form-input title-textarea"></textarea>
+                                </div>
+                                
+                            </div>
+                            <div class="form-group">
+                                <textarea name="body" id="id_body" class="form-input"></textarea>
+                            </div>
+
+                            <div class="button-container">
+                                <div class="left-button">
+                                    <a href="{% url 'LandingPage' %}"><span id="cancel">Cancel</span></a>
+                                </div>
+                                <div class="right-button">
+                                    <button type="submit" class="post-button right-button" href="{% url 'LandingPage' %}">Submit</button>
+                                </div>
+                            </div>
+                            
+                        </form>
+
+                        </div>
+                    
+                    </div>
+                </div>      
                 <ul>
                     {% for mission in object_list %}
                     <li>

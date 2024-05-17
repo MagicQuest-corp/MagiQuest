@@ -15,17 +15,25 @@
         
             </head>
             <body>
-    
+                <script>
+                    function LoginAlert() {
+                        alert("You must login first!.");
+                    }
+            
+                 </script>
         
                 <header class="header">
-        
+
                     <nav class="navbar">
-                        <a href="#"><button class= "navbutton">About</button></a>
-                        <a href="#"><button class= "navbutton">Home</button></a>
-                        <a href="#"><button class= "navbutton">Contact us</button></a>
+                        <a href="{% url 'about' %}"><button class= "navbutton">About</button></a>
+                        <a href="#"><button class= "navbutton" onclick="LoginAlert()">Home</button></a>
+                        <a href="{% url 'contact_us' %}"><button class= "navbutton">Contact us</button></a>
                 </nav>
         
+        
+        
                 </header>
+        
         
                     
                 <section class="logo-and-forms">
